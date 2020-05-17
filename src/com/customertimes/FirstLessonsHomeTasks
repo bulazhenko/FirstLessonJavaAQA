@@ -1,0 +1,110 @@
+1) Write a simple Java program using any text editor. Compile this program using Java compiler and run it from the console.
+You can write whatever you want, but program should compile and should print something to a console.
+2) Write a program which creates and initializes all primitive data types.
+Remark: There are 8 primitive data types.
+3) Create an integer variable "a". Try to assign a value to it the doesn't match the allowed range. What happened? Find in your favorite search engine the explanation.
+4) Answer the question: What the difference between integers and floating-point numbers?
+5) Read about ASCII. Write unicodes for all characters in a word "Hello".
+6) Create a simple program with several constants. Try to reassign a value for any of them and compile you program. What happened?
+7) Create an array of 10 integers. Initialize this array with any values except 0. Print the length of the array to a console.
+8) Create an array of 5 doubles. Get the first and the last element of the array an write them to variables.
+9) Read about version control systems, such as GIT. Create your own repository on Github. It will be used throughout this course to contribute your homeworks.
+Use the following link: https://git-scm.com/docs/gittutorial to get familiar with basic commands.
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+1 Task:
+
+public class Main {
+
+    public static void main(String[] args) {
+        System.out.println("Summer Time Sadness");
+        System.err.println("Example of error print");
+    }
+}
+
+2 Task:
+
+public class Main {
+
+  public static byte cat = 1;
+  public static short dog = 2;
+  public static int fish = 4;
+  public static long snake = 8;
+  public static float owl = 3.4f;
+  public static double shark = 6.7;
+  public static char a = 65;
+  public static boolean isCold = true;
+  public static boolean isHot = false;
+}
+
+3 Task:
+
+public class Main {
+
+  public static int a = 10.1;
+}
+Error:(26, 27) java: incompatible types: possible lossy conversion from double to int
+
+Because the value is not a type of int. (Becuse this value is a float point number).
+
+4 Task:
+
+Integers and floats are two different kinds of numerical data.
+An integer (more commonly called an int) is a number without a decimal point.
+A float is a floating-point number, which means it is a number that has a decimal place.
+Floats are used when more precision is needed.
+
+5 Task:
+
+H = 72;
+e = 101;
+l = 108;
+l = 108;
+o = 111;
+
+6 Task:
+
+public class Main {
+
+    public static final int HOT_COFFEE = 15;
+    public static final short HOT_TEA = 20;
+
+    public static void main(String[] args) {
+        HOT_COFFEE = 16;
+        HOT_TEA = 21;
+    }
+}
+
+Error:(9, 9) java: cannot assign a value to final variable HOT_COFFEE
+Error:(10, 9) java: cannot assign a value to final variable HOT_TEA
+
+7 Task:
+
+public class Main {
+
+    public static int[] arr = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+
+
+    public static void main(String[] args) {
+        System.out.println(arr.length);
+    }
+}
+
+Result:
+10
+
+Process finished with exit code 0
+
+8 Task:
+
+public class Main {
+
+    public static double[] arr = {0.25, 3.14, 5.78, 16.25, 7.15};
+
+    public static void main(String[] args) {
+        System.out.println(arr[0]);
+        System.out.println(arr[arr.length - 1]);
+    }
+}
